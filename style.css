@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+  margin:0 ;
+  background-color: #F1F0E9;
+
+}
+
+.headerposter{
+height: 50px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding:10px;
+  border: 1px solid #CBCBCB;
+  background:#F9F5F0;
+  height: 70px;
+}
+
+.logo-bar{
+  display: flex;
+  align-items: center;
+  padding:0 20px;
+  background:#F4991A;
+  height: 70px;
+
+  gap: 10px;
+}
+
+.menu{
+  display: flex;
+  justify-content: flex-start;
+  padding:0 20px;
+  height: 70px;
+
+}
+
+.log{
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+#signin{
+  height: 50px;
+}
+
+#loginin{
+  height: 50px;
+
+}
+
+
