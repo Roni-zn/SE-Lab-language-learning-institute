@@ -8,7 +8,8 @@ body{
 }
 
 .headerposter{
-height: 50px;
+  background-color: /*#FFE797 #84994F */ #8BAE66;
+  height: 56px;
 }
 
 nav{
@@ -16,25 +17,30 @@ nav{
   align-items:center;
   justify-content: space-between;
   padding:10px;
-  border: 1px solid #CBCBCB;
   background:#F9F5F0;
-  height: 70px;
+}
+
+.nav1{
+  height: 58px;
+}
+.nav2{
+  border: 1px solid #CBCBCB;
+  height: 40px;
+
 }
 
 .logo-bar{
   display: flex;
   align-items: center;
-  padding:0 20px;
-  background:#F4991A;
+  padding:30px;
   height: 70px;
-
   gap: 10px;
 }
 
 .menu{
   display: flex;
   justify-content: flex-start;
-  padding:0 20px;
+  padding: 30px;
   height: 70px;
 
 }
@@ -42,18 +48,45 @@ nav{
 .log{
   display: flex;
   align-items: center;
-
+  padding: 30px;
   gap: 10px;
 }
 
 
-#signin{
+.signin{
   height: 50px;
+  margin: 20px;
 }
 
-#loginin{
+.login{
+  background-color: #A72703;
   height: 50px;
-
+  margin: 20px;
 }
 
+.lan-card{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:200px;
+  margin: 50px;
+}
 
+.lancard{
+  position: relative;
+	height: 200px;
+	width: 400px;
+	margin: 20px;
+	background-color: #628141;
+	border-radius: 12%;
+}
+
+.flag{
+  display: flex;
+  margin: 20px;
+}
+
+footer{
+  background-color: #0D4715;
+  height: 300px;
+}
