@@ -53,15 +53,14 @@ nav{
 }
 
 
-.signin{
-  height: 50px;
-  margin: 20px;
+button{
+  height: 40px;
+  width: 80px;
+  margin: 10px;
 }
 
-.login{
+#login{
   background-color: #A72703;
-  height: 50px;
-  margin: 20px;
 }
 
 .lan-card{
