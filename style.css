@@ -1,34 +1,44 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
+/*----global style----*/
+
+html,body, header{
   margin:0 ;
   background-color: #F1F0E9;
 
+  font-family:"Parastoo",
+  "vazirmatn",
+   sans-serif;
+   direction: rtl;
 }
 
-.headerposter{
-  background-color: /*#FFE797 #84994F */ #8BAE66;
-  height: 56px;
-}
 
-nav{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  padding:10px;
-  background:#F9F5F0;
-}
-
-.nav1{
-  height: 58px;
-}
-.nav2{
-  border: 1px solid #CBCBCB;
+button{
+  font-family:  inherit;
   height: 40px;
-
+  width: 80px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+nav{
+  font-family: "Parastoo";
+  direction: rtl;
 }
 
+ul, li {
+  list-style: none;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 480px;
+  margin: 50px;
+
+}
 .logo-bar{
   display: flex;
   align-items: center;
@@ -37,12 +47,119 @@ nav{
   gap: 10px;
 }
 
+.card{
+  position: relative;
+	height: 200px;
+	width: 400px;
+	margin: 20px;
+	background-color: #628141;
+	border-radius: 12%;
+}
+.columnbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  margin: 30px;
+}
+.rowbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+  margin: 30px;
+}
+/*----main----*/
+#headerposter{
+  background-color: /*#FFE797 #84994F */ #8BAE66;
+  height: 56px;
+}
+.topnav1 *, .topnav2 * {
+  font-family: "Parastoo", sans-serif !important;
+}
+
+.topnav1, .topnav2{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding:10px;
+  background:#F9F5F0;
+}
+
+.topnav1{
+  height: 58px;
+}
+.topnav2{
+  border: 1px solid #CBCBCB;
+  height: 40px;
+
+}
+
+.content {
+  margin-right: 340px;
+}
+
 .menu{
   display: flex;
-  justify-content: flex-start;
-  padding: 30px;
-  height: 70px;
+  justify-content: center;
+  list-style: none;
+  margin-right: 200px ;
+  height: 50px;
+  gap: 34px;
+}
 
+.menu > li > a {
+   display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.menu > li > a:hover {
+  background-color: rgba(93, 90, 90, 0.147);
+  border-radius: 10px;
+}
+
+.has-dropdown{
+  position: relative;
+}
+.dropdown{
+  display: none;
+  position: absolute;
+  margin-top: 0;
+  top: 100%;
+  right: 0;
+  min-width: 220px;
+  padding: 8px 0;
+
+  list-style: none;
+  background-color: #F9F5F0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 25%;
+
+  direction: rtl;
+  text-align: right !important;
+  z-index: 9999;
+}
+.has-dropdown:hover > .dropdown {
+  display: block;
+  border-radius: 5%;
+}
+.dropdown li {
+  margin:0;
+  padding: 0;
+}
+.dropdown li a {
+  display: block;
+  padding: 12px 16px;
+  text-align: right !important;
+  text-decoration: none;
+  color: #333;
+}
+.dropdown > li > a:hover {
+  background-color: rgba(93, 90, 90, 0.147);
+  border-radius: 10px;
 }
 
 .log{
@@ -51,41 +168,143 @@ nav{
   padding: 30px;
   gap: 10px;
 }
-
-
-button{
-  height: 40px;
-  width: 80px;
-  margin: 10px;
+#signin{
+  background-color: #F2EAD3;
 }
-
 #login{
   background-color: #A72703;
 }
-
 .lan-card{
   display: flex;
+  flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	min-height:200px;
   margin: 50px;
 }
+.lan-card > .card:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
-.lancard{
-  position: relative;
-	height: 200px;
-	width: 400px;
-	margin: 20px;
-	background-color: #628141;
-	border-radius: 12%;
 }
-
 .flag{
   display: flex;
   margin: 20px;
 }
-
-footer{
-  background-color: #0D4715;
+#introduction{
+  background-color: #FCF7E8;
   height: 300px;
+  border-radius: 10px;
+  margin: 50px;
+}
+#howtostart{
+  font-family: "Parastoo", sans-serif;
+  font-size: 34px;
+  color: #0D4715;
+}
+
+#fivestage{
+  font-family: "Parastoo", sans-serif;
+  font-size: 54px;
+  color: #41644A;
+}
+
+#path{
+  font-family: "Parastoo", sans-serif;
+  font-size: 24px;
+  color: #386641;
+}
+
+.fivestage-title{
+  color: #0D4715;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.fivestage-p{
+  color: #41644A;
+  font-size: 18px;
+
+}
+#teacher{
+  
+}
+#last-news{
+  background-color: #FCB53B;
+  height: 450px;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.wave {
+  display: block;
+  width: 100%;
+  line-height: 0; 
+}
+
+.footerwave1{
+  margin-bottom: -100px;
+}
+
+.footerwave2{
+margin-top: -2px;
+}
+
+/*----dashboard----*/
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 240px;
+  height: 100vh;
+
+  background: #FFE797;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.box-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height:200px;
+  margin: 50px;
+}
+.dash-card-icon{
+  display:flex;
+  margin: 30px;
+}
+
+.card button{
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #628141;
+  color: white;
+}
+.card svg{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.card > ul{
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  padding: 0;
+}
+.card >ul > li{
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  text-align: right;
 }
