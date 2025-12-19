@@ -11,8 +11,9 @@ html,body, header{
   "vazirmatn",
    sans-serif;
    direction: rtl;
-}
 
+   overflow-x: hidden;
+}
 
 button{
   font-family:  inherit;
@@ -33,10 +34,15 @@ ul, li {
 }
 .box{
   display: flex;
+  position: relative;
   flex-direction: row;
-  justify-content: space-between;
-  height: 480px;
-  margin: 50px;
+  justify-content: center;
+  min-height: 490px;
+  height: auto;
+  padding: 50px;
+
+  border-radius: 40px;
+    overflow: hidden;
 
 }
 .logo-bar{
@@ -53,7 +59,16 @@ ul, li {
 	width: 400px;
 	margin: 20px;
 	background-color: #628141;
-	border-radius: 12%;
+	border-radius: 30px;
+}
+.big-card{
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: 20px;
+  background-color: #F1F0E9;
+  border-radius: 20px;
+  margin: 30px;
 }
 .columnbox{
   display: flex;
@@ -69,10 +84,32 @@ ul, li {
   align-items: right;
   margin: 30px;
 }
+.svg-background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  
+  z-index: 1;
+}
+.svg-background svg {
+  border-radius: inherit;
+}
 /*----main----*/
-#headerposter{
-  background-color: /*#FFE797 #84994F */ #8BAE66;
+.headerposter{
+  display: flex;
+  justify-content: center;
+  background-color: #8BAE66;
   height: 56px;
+}
+#headerposter-title{
+  font-family: "Parastoo", sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: #A72703;
+  align-items: center;
+  text-align: center;
+  margin-top:10px;
 }
 .topnav1 *, .topnav2 * {
   font-family: "Parastoo", sans-serif !important;
@@ -193,15 +230,15 @@ ul, li {
   margin: 20px;
 }
 #introduction{
-  background-color: #FCF7E8;
-  height: 300px;
-  border-radius: 10px;
+  position: relative;
   margin: 50px;
+  z-index: 2;
 }
 #howtostart{
   font-family: "Parastoo", sans-serif;
   font-size: 34px;
   color: #0D4715;
+  
 }
 
 #fivestage{
@@ -227,8 +264,45 @@ ul, li {
   font-size: 18px;
 
 }
-#teacher{
-  
+
+.teachers{
+  overflow-x: auto;
+  background-color: #FCB53B;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 450px;
+  width: 1510px;
+  border-radius: 10px;
+  margin: 40px; 
+  gap: 20px;
+}
+.teachers::-webkit-scrollbar {
+  display: none;
+}
+.teachers-wrapper{
+  position: relative;
+  height: 450px;
+}
+.scroll-btn-right, .scroll-btn-left{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+}
+.scroll-btn-right{
+  right: 10px;
+}
+.scroll-btn-left{
+  left: 10px; 
 }
 #last-news{
   background-color: #FCB53B;
@@ -236,20 +310,27 @@ ul, li {
   border-radius: 10px;
   margin: 50px;
 }
-
-.wave {
-  display: block;
-  width: 100%;
-  line-height: 0; 
+#faq-title{
+  font-family: "Parastoo", sans-serif;
+  font-size: 34px;
+  color: #0D4715;
+  align-items: right;
+  display: flex;
+}
+.faq-question{
+  background-color: rgba(62, 61, 61, 0.2);
+  height: 96px;
+  width: 500px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+#faq-illustration{
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
 }
 
-.footerwave1{
-  margin-bottom: -100px;
-}
-
-.footerwave2{
-margin-top: -2px;
-}
 
 /*----dashboard----*/
 #sidebar {
@@ -266,6 +347,26 @@ margin-top: -2px;
   flex-direction: column;
   align-items: stretch;
 }
+.dash-card-icon{
+  display:flex;
+  margin: 30px;
+}
+#sidebar-list{
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+#sidebar button{
+  margin: 20px;
+  background-color: #FFE797;
+  color: white;
+}
+#logo-dash{
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+}
 .box-card{
   display: flex;
   flex-direction: row;
@@ -274,11 +375,6 @@ margin-top: -2px;
   min-height:200px;
   margin: 50px;
 }
-.dash-card-icon{
-  display:flex;
-  margin: 30px;
-}
-
 .card button{
   position: absolute;
   height: 40px;
