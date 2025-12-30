@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>ملنگو- داشبورد معلم</title>
+    </head>
+    <body>
+        <nav class="sidebar" id="sidebar-teacher">
+                <ul id="sidebar-menu">
+                    <button class="submenubutton" data-page="profile" onclick="">پروفایل من</button>
+                        <ul class="submenu">
+                            <li><a href="#" data-page="view-profile">مشاهده پروفایل</a></li>
+                            <li><a href="#" data-page="edit-profile">ویرایش پروفایل</a></li>
+                        </ul>
+                    <button class="submenubutton" data-page="setting">کلاس ها</button>
+                        <ul class="submenu">
+                            <li><a href="#" data-page="my-classes">کلاس‌های من</a></li>
+                            <li><a href="#" data-page="enroll-class">ثبت‌نام در کلاس</a></li>
+                        </ul>
+                    <button class="submenubutton" data-page="logout">خروج</button>
+                </ul>
+                <div class="logo-bar" id="#logo-dash">
+                    <img src="data:image/png;base64,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" alt="external-mango-fruits-and-vegetable-outline-others-ghozy-muhtarom">
+                </div>
+        </nav>
+        <main>
+
+        </main>
+        <script src="dashboard.js"></script>
+    </body>
