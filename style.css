@@ -221,10 +221,25 @@ ul, li {
   padding: 32px;
   gap: 9px;
 }
-#signin{
+#t-login-btn{
   background-color: #F2EAD3;
+  display: inline-block;
+  padding: 16px 24px;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+
 }
-#login{
+#st-login-btn{
+  display: inline-block;
+  padding: 16px 24px;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
   background-color: #F97A00;
 }
 .lan-card{
@@ -416,7 +431,7 @@ ul, li {
 #sidebar-menu{
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 24px;
   margin: 0;
 }
 #sidebar-menu > .submenu {
@@ -469,23 +484,119 @@ ul, li {
 }
 .card svg{
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 24px;
+  right: 24px;
 }
 .card > ul{
   position: absolute;
-  top: 10px;
-  left: 50px;
+  top: 8px;
+  left: 48px;
   padding: 0;
 }
 .card >ul > li{
   list-style: none;
   color: white;
-  font-size: 20px;
-  margin: 10px;
+  font-size: 24px;
+  margin: 8px;
   text-align: right;
 }
 /*----dashboard teacher----*/
 #sidebar-teacher {
   background: #8BAE66;
 }
+
+
+/*----login-signin----*/
+#student-login{
+  background-image: url("icons/school-supplies-still-life-view-resize1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.516);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.466);
+  margin: 100px auto;
+
+
+  
+}
+#login-form{
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.login-logobar{
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  background-color: #F1F0E9;
+  border-radius: 50%;
+  box-shadow: 0px 8px 24px #33333384;
+
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.input-box{
+  width: 320px;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+#forgotten-pass{
+  color: #dd5151;
+  text-decoration: none;
+  margin: 16px;
+}
+#submit-btn{
+  width: 184px;
+  background-color: #628141;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+#signin-btn{
+  display: inline-block;
+  padding: 8px 24px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  width: 136px;
+  background-color: #FCB53B;
+  color: white;
+}
+
+#signin-form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 904px;
+  margin: auto;
+}
+#teacher-login{
+  background-image: url("icons/close-up-hand-writing-notebook-top-view-resize.jpg");
+  background-size: cover;
+}
+
