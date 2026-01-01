@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        
+        <link rel="stylesheet" href="style.css">
+        <title>ملنگو- داشبورد</title>
+    </head>
+    <body>
+        <nav class="sidebar" id="sidebar-student">
+                <ul id="sidebar-menu">
+                    <button class="submenubutton" data-page="profile" onclick="">پروفایل من</button>
+                        <ul class="submenu">
+                            <li><a href="#" data-page="view-profile">مشاهده پروفایل</a></li>
+                            <li><a href="#" data-page="edit-profile">ویرایش پروفایل</a></li>
+                        </ul>
+                    <button class="submenubutton" data-page="setting">کلاس ها</button>
+                        <ul class="submenu">
+                            <li><a href="#" data-page="my-classes">کلاس‌های من</a></li>
+                            <li><a href="#" data-page="enroll-class">ثبت‌نام در کلاس</a></li>
+                        </ul>
+                    <button class="submenubutton" data-page="logout">خروج</button>
+                </ul>
+                <div class="logo-bar" id="#logo-dash">
+                  <a href="main.html"><img src="data:image/png;base64,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" alt="external-mango-fruits-and-vegetable-outline-others-ghozy-muhtarom">
+                    </a>
+                </div>
+        </nav>
+        <main class="content" id="mainContent">
+            <h1>به داشبورد ملنگو خوش آمدید</h1>
+             <section class="box-card">
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 -960 960 960" width="96px" fill="#FFE797"><path d="M510-570v-270h330v270H510ZM120-450v-390h330v390H120Zm390 330v-390h330v390H510Zm-390 0v-270h330v270H120Zm60-390h210v-270H180v270Zm390 330h210v-270H570v270Zm0-450h210v-150H570v150ZM180-180h210v-150H180v150Zm210-330Zm180-120Zm0 180ZM390-330Z"/></svg>
+                    <ul>
+                        <li>زبان‌های من</li>
+                        <li>پیشرفت در زبان‌ها</li>
+                    </ul>
+                    <button>مشاهده کنید</button>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 -960 960 960" width="96px" fill="#FFE797"><path d="M332-254q11 0 18-6t8-15q2-17 4.5-32l4.5-27q2-10 3-22t5-28q26-5 51.5-8.5T476-399q26-3 50.5-4.5T574-407q5 20 8.5 40t9.5 40q8 23 17.5 39t23.5 27q9 7 19 9t18-1q11-4 12-12t-6-24q-9-20-15-36.5T651-356q-4-15-7-28l-6-26q6 0 13.5-.5T663-412q17-2 25-11t8-20q0-12-9.5-20t-26.5-8h-13.5q-9.5 0-19.5 1-2-19-4.5-37.5T617-545q-3-22-6.5-40t-7.5-35q-5-20-14.5-36.5T565-685q-12-11-26-16.5t-28-5.5q-23 0-41 8t-35 26q-10 11-21 25.5T390-613q-6-9-12.5-13t-15.5-4q-8 0-13 4.5t-5 11.5q0 28-3.5 54.5T331-506q-4 19-8.5 38t-9.5 38q-13 1-22 2.5t-14 4.5q-6 3-9 8.5t-3 13.5q0 8 2 12.5t7 7.5q5 3 13 4t20 0q0 16-2 31.5t-2 30.5q0 14 .5 24.5T306-274q3 11 9.5 15.5T332-254Zm60-195q9-34 19-62.5t22-53.5q12-26 28.5-53t45.5-27q17 0 28 17.5t17 52.5q4 24 5.5 53.5T562-468q-21 2-42 3.5t-43 3.5q-21 2-42 5t-43 7ZM140-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h680q24 0 42 18t18 42v680q0 24-18 42t-42 18H140Zm0-60h680v-680H140v680Zm0 0v-680 680Z"/></svg>
+                    <ul>
+                        <li>دوره‌های من</li>
+                        <li>پیشرفت در دوره‌ها</li>
+                    </ul>
+                    <button>بیشتر...</button>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 -960 960 960" width="96px" fill="#FFE797"><path d="M543-340q16.6 0 28.8-12.2T584-381q0-16.6-12.2-28.8T543-422q-16.6 0-28.8 12.2T502-381q0 16.6 12.2 28.8T543-340Zm-25-126h47q2-29 8.5-43t32.5-39q27-26 37.5-45.4Q654-612.79 654-639q0-45.88-31.5-74.94Q591-743 540-743q-38 0-68 20.5T428-665l45 19q11-25 27.5-38t39.5-13q29.78 0 48.39 17T607-637q0 20-9 35t-32 32q-32 29-40 46.5t-8 57.5ZM260-200q-24 0-42-18t-18-42v-560q0-24 18-42t42-18h560q24 0 42 18t18 42v560q0 24-18 42t-42 18H260Zm0-60h560v-560H260v560ZM140-80q-24 0-42-18t-18-42v-620h60v620h620v60H140Zm120-740v560-560Z"/></svg>
+                    <ul>
+                        <li>آزمون‌های من</li>
+                        <li>سوابق آزمون ها</li>
+                        <li>تعیین سطح</li>
+                    </ul>
+                    <button>شروع آزمون</button>
+                </div>
+            </section>
+            <section class="box-card">
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 -960 960 960" width="96px" fill="#FFE797"><path d="M220-80q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h520q24 0 42 18t18 42v680q0 24-18 42t-42 18H220Zm0-60h520v-680h-60v266l-97-56-97 56v-266H220v680Zm0 0v-680 680Zm266-414 97-56 97 56-97-56-97 56Z"/></svg>
+                    <ul>
+                        <li>خرید کتاب</li>
+                        <li>دانلود کتاب</li>
+                        <li>سوابق خرید</li>
+                    </ul>
+                    <button id="books">خرید کنید</button>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 -960 960 960" width="96px" fill="#FFE797"><path d="m590-488 160-92-160-92-160 92 160 92Zm0 122 110-64v-84l-110 64-110-64v84l110 64ZM481-480Zm340 320H601q0-15-1-30t-3-30h224v-520H141v60q-15-2-30-3t-30-1v-56q0-24.75 17.63-42.38Q116.25-800 141-800h680q24.75 0 42.38 17.62Q881-764.75 881-740v520q0 24.75-17.62 42.37Q845.75-160 821-160Zm-740 0v-104q41.67 0 70.83 30.33Q181-203.33 181-160H81Zm200 0q0-84.66-58-144.33Q165-364 81-364v-60q108.64 0 184.32 77.5Q341-269 341-160h-60Zm160 0q0-75-28-141.5t-77-116q-49-49.5-114.5-78T81-524v-60q87 0 163.5 33.5t133.5 91q57 57.5 90 135T501-160h-60Z"/></svg>
+                    <ul>
+                        <li>لینک کلاس</li>
+                        <li>سوابق حضور</li>
+                    </ul>
+                    <button>کلیک کنید</button>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li>مشاهده ویدئو</li>
+                        <li>دسته‌بندی ویدئوها</li>
+                        <li>سوابق مشاهده</li> 
+                    </ul>
+                    <button>بیشتر...</button>
+                </div>
+            </section>
+        </main>
+
+       <script src="dashboard.js"></script>
+</html>

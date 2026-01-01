@@ -1,92 +1,602 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*----global style----*/
+
+html{
+    direction: rtl;
+}
 body{
   margin:0 ;
   background-color: #F1F0E9;
 
+  font-family:"Parastoo",
+  "Vazirmatn",
+  sans-serif;
+
+   overflow-x: hidden;
 }
 
+*, *::before, *::after {
+  font-family: inherit;
+}
+
+button{
+  height: 40px;
+  width: 88px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+nav{
+  font-family: "Parastoo";
+  direction: rtl;
+}
+
+ul, li {
+  list-style: none;
+}
+.box{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 480px;
+  height: auto;
+  padding: 48px;
+
+  border-radius: 40px;
+    overflow: hidden;
+
+}
+.logo-bar{
+  display: flex;
+  align-items: center;
+  padding:32px;
+  height: 72px;
+  gap: 8px;
+}
+
+.card{
+  position: relative;
+	height: 240px;
+	width: 400px;
+	margin: 24px;
+	background-color: #628141;
+	border-radius: 32px;
+}
+.big-card{
+  position: relative;
+  height: 400px;
+  min-width: 320px;
+  margin: 16px;
+  background-color: #F1F0E9;
+  border-radius: 16px;
+  
+}
+.columnbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  margin: 32px;
+}
+.rowbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+  margin: 32px;
+}
+.svg-background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  
+  z-index: 1;
+}
+.svg-background svg {
+  border-radius: inherit;
+}
+/*----main----*/
 .headerposter{
-  background-color: /*#FFE797 #84994F */ #8BAE66;
+  display: flex;
+  justify-content: center;
+  background-color: #8BAE66;
   height: 56px;
 }
+#headerposter-title{
+  font-family: "Parastoo", sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: #A72703;
+  align-items: center;
+  text-align: center;
+  margin-top:8px;
+}
+.topnav1 *, .topnav2 * {
+  font-family: "Parastoo", sans-serif ;
+}
 
-nav{
+.topnav1, .topnav2{
   display:flex;
   align-items:center;
   justify-content: space-between;
-  padding:10px;
+  padding:8px;
   background:#F9F5F0;
 }
 
-.nav1{
-  height: 58px;
+.topnav1{
+  height: 56px;
 }
-.nav2{
+.topnav2{
   border: 1px solid #CBCBCB;
   height: 40px;
 
 }
-
-.logo-bar{
-  display: flex;
-  align-items: center;
-  padding:30px;
-  height: 70px;
-  gap: 10px;
+#searchbar{
+  width: 240px;
+  height: 24px;
+  background-color: rgba(109, 106, 106, 0.088);
+  border: 1px solid #CBCBCB;
+  border-radius: 8px;
+  padding: 8px;
 }
-
+#search-input{
+  border: none;
+  outline: none;
+  width: 160px;
+  height: 24px;
+  font-size: 14px;
+  background-color: transparent;
+}
 .menu{
   display: flex;
-  justify-content: flex-start;
-  padding: 30px;
-  height: 70px;
+  justify-content: center;
+  list-style: none;
+  margin-right: 240px ;
+  height: 48px;
+  gap: 32px;
+}
 
+.menu > li > a {
+   display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.menu > li > a:hover {
+  background-color: rgba(93, 90, 90, 0.045);
+  border-radius: 8px;
+}
+
+.has-dropdown{
+  position: relative;
+}
+.dropdown{
+  display: none;
+  position: absolute;
+  margin-top: 0;
+  top: 100%;
+  right: 0;
+  min-width: 240px;
+  padding: 8px 0;
+
+  list-style: none;
+  background-color: #F9F5F0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+
+  direction: rtl;
+  text-align: right !important;
+  z-index: 9999;
+}
+.has-dropdown:hover > .dropdown {
+  display: block;
+  border-radius: 8px;
+}
+.dropdown li {
+  margin:0;
+  padding: 0;
+}
+.dropdown li a {
+  display: block;
+  padding: 16px;
+  text-align: right !important;
+  text-decoration: none;
+  color: #333;
+}
+.dropdown > li > a:hover {
+  background-color: rgba(93, 90, 90, 0.147);
+  border-radius: 8px;
 }
 
 .log{
   display: flex;
   align-items: center;
-  padding: 30px;
-  gap: 10px;
+  padding: 32px;
+  gap: 9px;
 }
+#t-login-btn{
+  background-color: #F2EAD3;
+  display: inline-block;
+  padding: 16px 24px;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
 
-
-.signin{
-  height: 50px;
-  margin: 20px;
 }
-
-.login{
-  background-color: #A72703;
-  height: 50px;
-  margin: 20px;
+#st-login-btn{
+  display: inline-block;
+  padding: 16px 24px;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+  background-color: #F97A00;
 }
-
 .lan-card{
   display: flex;
+  flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	min-height:200px;
-  margin: 50px;
+	min-height:240px;
+  margin: 48px;
 }
+.lan-card > .card:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
-.lancard{
-  position: relative;
-	height: 200px;
-	width: 400px;
-	margin: 20px;
-	background-color: #628141;
-	border-radius: 12%;
 }
-
 .flag{
   display: flex;
-  margin: 20px;
+  margin: 24px;
+}
+#introduction{
+  position: relative;
+  margin: 48px;
+  z-index: 2;
+}
+#howtostart{
+  font-family: "Parastoo", sans-serif;
+  font-size: 34px;
+  color: #0D4715;
+  
 }
 
-footer{
-  background-color: #0D4715;
-  height: 300px;
+#fivestage{
+  font-family: "Parastoo", sans-serif;
+  font-size: 54px;
+  color: #41644A;
 }
+
+#path{
+  font-family: "Parastoo", sans-serif;
+  font-size: 24px;
+  color: #386641;
+}
+
+.fivestage-title{
+  color: #0D4715;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.fivestage-p{
+  color: #41644A;
+  font-size: 18px;
+
+}
+
+.teachers{
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #FCB53B;
+  display: flex;
+  flex-direction: row;
+  height: 480px;
+  width: 1496px;
+  border-radius: 16px;
+  margin: 48px; 
+  gap: 8px;
+
+}
+.teachers::-webkit-scrollbar {
+  display: none;
+}
+.teachers-wrapper{
+  position: relative;
+  height: 400px;
+}
+.scroll-btn-right, .scroll-btn-left{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 8px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+}
+.scroll-btn-right{
+  right: 8px;
+}
+.scroll-btn-left{
+  left: 8px; 
+}
+.teacher-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+.teacher-info img{
+  width: 160px;
+  border-radius: 50%;
+}
+#last-news{
+  background-color: #FCB53B;
+  height: 480px;
+  border-radius: 8px;
+  margin: 48px;
+}
+#faq-title{
+  font-family: "Parastoo", sans-serif;
+  font-size: 34px;
+  color: #0D4715;
+  align-items: right;
+  display: flex;
+}
+.faq-question{
+  background-color: rgba(62, 61, 61, 0.2);
+  height: 96px;
+  width: 480px;
+  border-radius: 8px;
+  margin: 24px;
+  padding: 16px;
+
+  justify-content: center;
+  align-items: center;
+}
+#faq-illustration{
+  width: 320px;
+  height: 320px;
+  margin-top: 32px;
+}
+.faq-question > svg{
+  position:relative;
+  margin: 0;
+  top: 10px;
+  left: 10px;
+}
+.faq-question-text{
+  line-height: 3;
+  font-family: "Parastoo", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: #0D4715;
+  margin: 48px;
+}
+
+#visual{
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#socialmedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+/*----dashboards----*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 240px;
+  height: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.dash-card-icon{
+  display:flex;
+  margin: 30px;
+}
+#sidebar-menu{
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  margin: 0;
+}
+#sidebar-menu > .submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+#sidebar-menu.active .submenu {
+  display: block;
+}
+.submenubutton{
+  margin: 20px;
+  background-color: transparent;
+  font-family: 'Parastoo'
+}
+#logo-dash{
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+}
+.content {
+  margin-right: 280px;
+}
+.box-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height:160px;
+  width: 1200px;
+  margin: 24px;
+}
+
+
+/*----dashboard student----*/
+#sidebar-student {
+  background: #FFE797;
+}
+
+.card button{
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #628141;
+  color: white;
+}
+.card svg{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.card > ul{
+  position: absolute;
+  top: 8px;
+  left: 48px;
+  padding: 0;
+}
+.card >ul > li{
+  list-style: none;
+  color: white;
+  font-size: 24px;
+  margin: 8px;
+  text-align: right;
+}
+/*----dashboard teacher----*/
+#sidebar-teacher {
+  background: #8BAE66;
+}
+
+
+/*----login-signin----*/
+#student-login{
+  background-image: url("icons/school-supplies-still-life-view-resize1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.516);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.466);
+  margin: 100px auto;
+
+
+  
+}
+#login-form{
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.login-logobar{
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  background-color: #F1F0E9;
+  border-radius: 50%;
+  box-shadow: 0px 8px 24px #33333384;
+
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.input-box{
+  width: 320px;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+#forgotten-pass{
+  color: #dd5151;
+  text-decoration: none;
+  margin: 16px;
+}
+#submit-btn{
+  width: 184px;
+  background-color: #628141;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+#signin-btn{
+  display: inline-block;
+  padding: 8px 24px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  width: 136px;
+  background-color: #FCB53B;
+  color: white;
+}
+
+#signin-form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 904px;
+  margin: auto;
+}
+#teacher-login{
+  background-image: url("icons/close-up-hand-writing-notebook-top-view-resize.jpg");
+  background-size: cover;
+}
+
